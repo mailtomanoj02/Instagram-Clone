@@ -1,19 +1,11 @@
-import React, {useState} from 'react';
-import {
-  Animated,
-  TouchableOpacity,
-  Text,
-  View,
-  PanResponder,
-} from 'react-native';
-import Ionic from 'react-native-vector-icons/Ionicons'
+import React from 'react';
+import {Text, View} from 'react-native';
+import AppNavigation from './src/AppNavigation/AppNavigation';
 
 const App = props => {
   return (
-    <View>
-      <Text style={{fontFamily:'Lobster-Regular'}}>Hello world</Text>
-      <Ionic name='play' style={{fontSize:30}}/>
-
+    <View style={{flex: 1, backgroundColor: 'red'}}>
+      <AppNavigation />
     </View>
   );
 };
