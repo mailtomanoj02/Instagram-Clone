@@ -32,6 +32,7 @@ const Status = ({route, navigation}) => {
       useNativeDriver: false,
     }).start();
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const {name, image} = route.params;
   return (
