@@ -11,6 +11,7 @@ import Ionic from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import {ICON_NAME} from '../../Icons/Icons';
 import Story from './Story';
+import Posts from './Posts';
 
 const HomeScreen = () => {
   return (
@@ -38,6 +39,7 @@ const HomeScreen = () => {
       </View>
       <ScrollView>
         <Story />
+        <Posts />
       </ScrollView>
     </View>
   );

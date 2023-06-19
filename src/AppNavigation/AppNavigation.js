@@ -12,6 +12,8 @@ import Ionic from 'react-native-vector-icons/Ionicons';
 import {ICON_NAME} from '../Icons/Icons';
 import {COLORS} from '../Colors/Colors';
 import HomeScreen from '../Screens/Home/HomeScreen';
+import Status from '../Screens/Home/Status';
+import Posts from '../Screens/Home/Posts';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -68,6 +70,8 @@ const AppNavigation = () => {
           name={SCREEN_NAMES.BOTTOM_TAB.route}
           component={TabNavigator}
         />
+        <Stack.Screen name={SCREEN_NAMES.STATUS.route} component={Status} />
+        <Stack.Screen name={SCREEN_NAMES.POSTS.route} component={Posts} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -23,4 +23,12 @@ export const SCREEN_NAMES = {
     route: 'BOTTOM_TAB',
     Screen_name: 'Bottom_tab',
   },
+  STATUS: {
+    route: 'STATUS',
+    Screen_name: 'Status',
+  },
+  POSTS: {
+    route: 'POSTS',
+    Screen_name: 'Posts',
+  },
 };

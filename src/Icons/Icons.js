@@ -9,4 +9,6 @@ export const ICON_NAME = {
   HEART_UNFILL: 'ios-heart-outline',
   PERSON_FILL: 'ios-person-circle',
   PERSON_UNFILL: 'ios-person-outline',
+  CIRCLE_WITH_PLUS: 'circle-with-plus',
+  NAVIGATION: 'navigation',
 };
