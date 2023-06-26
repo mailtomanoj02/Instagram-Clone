@@ -11,4 +11,9 @@ export const ICON_NAME = {
   PERSON_UNFILL: 'ios-person-outline',
   CIRCLE_WITH_PLUS: 'circle-with-plus',
   NAVIGATION: 'navigation',
+  VERTICAL_DOT: 'more-vertical',
+  HEART: 'heart',
+  HEARTO: 'hearto',
+  IOS_CHATBUBBLE_OUTLINE: 'ios-chatbubble-outline',
+  BOOKMARK: 'bookmark',
 };

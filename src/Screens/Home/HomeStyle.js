@@ -56,7 +56,6 @@ export const HomeScreenStyle = StyleSheet.create({
     top: 15,
   },
   statusLoadingInnerViewStyle: {
-    width: '50%',
     height: '100%',
     backgroundColor: COLORS.WHITE,
   },
@@ -103,4 +102,48 @@ export const HomeScreenStyle = StyleSheet.create({
     paddingLeft: 20,
   },
   navigationIconStyle: {fontSize: 30, color: COLORS.WHITE, opacity: 0.7},
+  postRootContainer: {
+    paddingBottom: 10,
+    borderBottomColor: 'grey',
+    borderBottomWidth: 0.1,
+  },
+  postInnerContainerStyle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 15,
+  },
+  postHeaderViewStyle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  personHeaderIconStyle: {width: 40, height: 40, borderRadius: 100},
+  postHeaderNameStyle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    paddingLeft: 5,
+    color: COLORS.BLACK,
+  },
+  verticalDotIconStyle: {fontSize: 20},
+  postImageStyle: {height: 350, width: '100%'},
+  postBottomConatiner: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  postBottomIconViewContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    // justifyContent: 'space-between',
+    padding: 15,
+  },
+  postChatIconStyle: {
+    fontSize: 20,
+    paddingRight: 10,
+  },
+  postNavigationIconStyle: {
+    fontSize: 20,
+    paddingRight: 10,
+  },
+  postBookmarkIconStyle: {fontSize: 20, paddingRight: 8},
 });
