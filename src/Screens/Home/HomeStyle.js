@@ -146,4 +146,22 @@ export const HomeScreenStyle = StyleSheet.create({
     paddingRight: 10,
   },
   postBookmarkIconStyle: {fontSize: 20, paddingRight: 8},
+  commentsIconPersonStyle: {
+    height: 25,
+    width: 25,
+    borderRadius: 100,
+    marginRight: 5,
+  },
+  commentViewStyle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  descriptionTextStyle: {
+    fontWeight: '700',
+    fontSize: 14,
+    paddingVertical: 4,
+    color: COLORS.BLACK,
+  },
+  likeContainerStyle: {paddingHorizontal: 15},
+  viewAllCommentStyle: {opacity: 0.7, paddingVertical: 2},
 });

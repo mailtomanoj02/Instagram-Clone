@@ -4,4 +4,6 @@ export const COLORS = {
   BLUE: '#405de6',
   STORY_BACK: '#c13584',
   RED: '#FF0000',
+  PLACEHOLDER_GREY: '#909090',
+  BACKGROUND_GREY: '#EBEBEB',
 };

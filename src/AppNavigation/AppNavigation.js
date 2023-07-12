@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SCREEN_NAMES} from './ScreenConstants';
 import Activity from '../Screens/Activity';
-import Search from '../Screens/Search';
+import SearchScreen from '../Screens/Search/SearchScreen';
 import Reels from '../Screens/Reels';
 import Profile from '../Screens/Profile';
 import {NavigationStyles} from './AppNavigationStyle';
@@ -51,7 +51,7 @@ const TabNavigator = () => {
           renderTabBarIcon({route, focused, color, size}),
       })}>
       <Tab.Screen name={SCREEN_NAMES.HOME.route} component={HomeScreen} />
-      <Tab.Screen name={SCREEN_NAMES.SEARCH.route} component={Search} />
+      <Tab.Screen name={SCREEN_NAMES.SEARCH.route} component={SearchScreen} />
       <Tab.Screen name={SCREEN_NAMES.REELS.route} component={Reels} />
       <Tab.Screen name={SCREEN_NAMES.ACTIVITY.route} component={Activity} />
       <Tab.Screen name={SCREEN_NAMES.PROFILE.route} component={Profile} />

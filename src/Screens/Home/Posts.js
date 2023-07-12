@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
 import {HomeScreenStyle} from './HomeStyle';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -85,23 +92,24 @@ const Posts = () => {
             />
           </TouchableOpacity>
         </View>
-        <View style={{paddingHorizontal: 15}}>
+        <View style={HomeScreenStyle.likeContainerStyle}>
           <Text style={{color: COLORS.BLACK}}>
             Liked By {item.isLiked ? 'you and' : ''}{' '}
             {item.isLiked ? item.likes + 1 : item.likes}
           </Text>
-          <Text
-            style={{
-              fontWeight: '700',
-              fontSize: 14,
-              paddingVertical: 4,
-              color: COLORS.BLACK,
-            }}>
+          <Text style={HomeScreenStyle.descriptionTextStyle}>
             Instagram clone helps me to learn about react native!!
           </Text>
-          <Text style={{opacity: 0.7, paddingVertical: 2}}>
+          <Text style={HomeScreenStyle.viewAllCommentStyle}>
             View All Comments
           </Text>
+          <View style={HomeScreenStyle.commentViewStyle}>
+            <Image
+              source={item.postPersonImage}
+              style={HomeScreenStyle.commentsIconPersonStyle}
+            />
+            <TextInput placeholder="Add your comment" />
+          </View>
         </View>
       </View>
     );
