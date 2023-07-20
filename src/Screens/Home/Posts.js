@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import FastImage from 'react-native-fast-image';
 import {
   View,
   Text,
@@ -43,9 +44,10 @@ const Posts = () => {
     };
     return (
       <View style={HomeScreenStyle.postRootContainer}>
+        {console.log('called')}
         <View style={HomeScreenStyle.postInnerContainerStyle}>
           <View style={HomeScreenStyle.postHeaderViewStyle}>
-            <Image
+            <FastImage
               source={item.postPersonImage}
               style={HomeScreenStyle.personHeaderIconStyle}
             />
@@ -58,7 +60,14 @@ const Posts = () => {
             style={HomeScreenStyle.verticalDotIconStyle}
           />
         </View>
-        <Image source={item.postImage} style={HomeScreenStyle.postImageStyle} />
+        {/* <FastImage
+          source={item.postImage}
+          style={HomeScreenStyle.postImageStyle}
+        /> */}
+        <FastImage
+          style={HomeScreenStyle.postImageStyle}
+          source={item.postImage}
+        />
         <View style={HomeScreenStyle.postBottomConatiner}>
           <View style={HomeScreenStyle.postBottomIconViewContainer}>
             <TouchableOpacity onPress={onPressLike}>
@@ -104,7 +113,7 @@ const Posts = () => {
             View All Comments
           </Text>
           <View style={HomeScreenStyle.commentViewStyle}>
-            <Image
+            <FastImage
               source={item.postPersonImage}
               style={HomeScreenStyle.commentsIconPersonStyle}
             />

@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, FlatList, TouchableOpacity, Image} from 'react-native';
+import FastImage from 'react-native-fast-image';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import {HomeScreenStyle} from './HomeStyle';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {ICON_NAME} from '../../Icons/Icons';
@@ -71,7 +72,7 @@ const Story = () => {
           null}
         </View>
         <View style={HomeScreenStyle.imageViewStyle}>
-          <Image source={item.image} style={HomeScreenStyle.imageStyle} />
+          <FastImage source={item.image} style={HomeScreenStyle.imageStyle} />
         </View>
         <Text
           style={[

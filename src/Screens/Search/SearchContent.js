@@ -1,4 +1,5 @@
 import React from 'react';
+import FastImage from 'react-native-fast-image';
 import {View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
 import Ionic from 'react-native-vector-icons/Ionicons';
 import {ICON_NAME} from '../../Icons/Icons';
@@ -48,7 +49,7 @@ const SearchContent = () => {
                   return (
                     <TouchableOpacity
                       style={SearchScreenStyles.imageButtonStyle}>
-                      <Image
+                      <FastImage
                         source={image}
                         style={SearchScreenStyles.imageStyle}
                       />
@@ -69,7 +70,7 @@ const SearchContent = () => {
                   {item.images.splice(0, 4).map((item, index) => {
                     return (
                       <TouchableOpacity>
-                        <Image
+                        <FastImage
                           source={item}
                           style={SearchScreenStyles.imageStyle}
                         />
@@ -88,4 +89,4 @@ const SearchContent = () => {
   );
 };
 
-export default SearchContent;
+export default React.memo(SearchContent);
