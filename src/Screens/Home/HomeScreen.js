@@ -21,6 +21,16 @@ const HomeScreen = () => {
         barStyle="dark-content"
         animated={true}
       />
+      <StatusBar
+        backgroundColor="white"
+        barStyle="dark-content"
+        animated={true}
+      />
+      <StatusBar
+        backgroundColor="white"
+        barStyle="dark-content"
+        animated={true}
+      />
       <View style={HomeScreenStyle.topBarContainerStyle}>
         <View>
           <Text style={HomeScreenStyle.InstagramTextStyle}>Instagram</Text>

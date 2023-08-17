@@ -55,6 +55,11 @@ const Posts = () => {
               {item.postTitle}
             </Text>
           </View>
+
+          <Feather
+            name={ICON_NAME.VERTICAL_DOT}
+            style={HomeScreenStyle.verticalDotIconStyle}
+          />
           <Feather
             name={ICON_NAME.VERTICAL_DOT}
             style={HomeScreenStyle.verticalDotIconStyle}
