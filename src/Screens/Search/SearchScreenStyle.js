@@ -33,6 +33,36 @@ export const SearchScreenStyles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
   },
-  imageStyle: {height: 140, width: 133},
+  imageStyle: {height: 140, width: 126},
   imageButtonStyle: {padding: 2},
+  multiImageMainContainerStyle: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  multiImageContainerStyle: {
+    width: 257,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginLeft: 3,
+    marginTop: 2,
+  },
+  finalImageContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 3,
+  },
+  finalImageInnerContainer: {
+    width: 130,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+  },
+  plusIconContainerStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 20,
+  },
+  plusIconStyle: {fontSize: 40, opacity: 0.5},
 });

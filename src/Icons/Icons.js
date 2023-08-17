@@ -16,4 +16,5 @@ export const ICON_NAME = {
   HEARTO: 'hearto',
   IOS_CHATBUBBLE_OUTLINE: 'ios-chatbubble-outline',
   BOOKMARK: 'bookmark',
+  CIRCLEO: 'pluscircleo',
 };

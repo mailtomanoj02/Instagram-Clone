@@ -34,7 +34,8 @@ const SearchContent = () => {
       id: 2,
       images: [
         require('./../../Images/post13.jpg'),
-        require('./../../Images/post14.jpg'),
+        require('./../../Images/post1.jpg'),
+        require('./../../Images/post10.jpg'),
       ],
     },
   ];
@@ -58,16 +59,9 @@ const SearchContent = () => {
                 })}
               </View>
             ) : item.id === 1 ? (
-              <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-                <View
-                  style={{
-                    width: 260,
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                    backgroundColor: 'red',
-                  }}>
-                  {item.images.splice(0, 4).map((item, index) => {
+              <View style={SearchScreenStyles.multiImageMainContainerStyle}>
+                <View style={SearchScreenStyles.multiImageContainerStyle}>
+                  {item.images.slice(0, 4).map((item, index) => {
                     return (
                       <TouchableOpacity>
                         <FastImage
@@ -78,10 +72,35 @@ const SearchContent = () => {
                     );
                   })}
                 </View>
+                <TouchableOpacity>
+                  <FastImage
+                    source={item.images[5]}
+                    style={{width: 128, height: 280}}
+                  />
+                </TouchableOpacity>
               </View>
-            ) : (
-              <Text>manojx</Text>
-            )}
+            ) : item.id === 2 ? (
+              <View style={SearchScreenStyles.finalImageContainer}>
+                <TouchableOpacity>
+                  <FastImage
+                    source={item.images[2]}
+                    style={{width: 260, height: 285}}
+                  />
+                </TouchableOpacity>
+                <View style={SearchScreenStyles.finalImageInnerContainer}>
+                  {item.images.slice(0, 2).map((image, index) => {
+                    return (
+                      <TouchableOpacity style={{paddingBottom: 2}}>
+                        <FastImage
+                          source={image}
+                          style={{width: 128, height: 142}}
+                        />
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+            ) : null}
           </>
         );
       })}
