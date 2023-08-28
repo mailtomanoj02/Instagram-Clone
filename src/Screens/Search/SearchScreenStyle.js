@@ -1,5 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {COLORS} from './../../Colors/Colors';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 export const SearchScreenStyles = StyleSheet.create({
   rootContainer: {
@@ -65,4 +67,21 @@ export const SearchScreenStyles = StyleSheet.create({
     margin: 20,
   },
   plusIconStyle: {fontSize: 40, opacity: 0.5},
+  imagePopupOuterContainer: {
+    height: '100%',
+    width: '100%',
+    position: 'absolute',
+    zIndex: 1,
+  },
+  imagePopUpInnerContainer: {
+    position: 'absolute',
+    top: windowHeight / 6,
+    left: windowWidth / 18,
+    width: 350,
+    height: 465,
+    backgroundColor: 'white',
+    borderRadius: 15,
+    zIndex: 1,
+    elevation: 50,
+  },
 });

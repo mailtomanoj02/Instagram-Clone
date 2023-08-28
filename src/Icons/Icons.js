@@ -17,4 +17,5 @@ export const ICON_NAME = {
   IOS_CHATBUBBLE_OUTLINE: 'ios-chatbubble-outline',
   BOOKMARK: 'bookmark',
   CIRCLEO: 'pluscircleo',
+  CAMERA: 'camera',
 };

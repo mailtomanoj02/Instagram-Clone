@@ -6,4 +6,5 @@ export const COLORS = {
   RED: '#FF0000',
   PLACEHOLDER_GREY: '#909090',
   BACKGROUND_GREY: '#EBEBEB',
+  STATUSBAR: '#525252',
 };
