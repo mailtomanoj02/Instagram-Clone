@@ -1,11 +1,14 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
+import {
+  NavigationContainer,
+  useNavigationState,
+} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SCREEN_NAMES} from './ScreenConstants';
 import Activity from '../Screens/Activity';
 import SearchScreen from '../Screens/Search/SearchScreen';
-import Reels from '../Screens/Reels';
+import Reels from '../Screens/Reels/Reels';
 import Profile from '../Screens/Profile';
 import {NavigationStyles} from './AppNavigationStyle';
 import Ionic from 'react-native-vector-icons/Ionicons';
@@ -19,6 +22,10 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  const screenName = useNavigationState(
+    state => state.routes[state.index].name,
+  );
+  console.log(screenName);
   const renderTabBarIcon = ({route, focused, color, size}) => {
     let iconName;
     if (route.name === SCREEN_NAMES.HOME.route) {

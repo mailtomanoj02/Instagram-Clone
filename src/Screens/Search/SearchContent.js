@@ -6,7 +6,8 @@ import {ICON_NAME} from '../../Icons/Icons';
 import {SearchScreenStyles} from './SearchScreenStyle';
 import {COLORS} from '../../Colors/Colors';
 
-const SearchContent = () => {
+const SearchContent = props => {
+  const {getImage,resetData} = props;
   const data = [
     {
       id: 0,
@@ -49,6 +50,8 @@ const SearchContent = () => {
                 {item.images.map((image, index) => {
                   return (
                     <TouchableOpacity
+                      onPressIn={() => getImage(image)}
+                      onPressOut={() => resetData()}
                       style={SearchScreenStyles.imageButtonStyle}>
                       <FastImage
                         source={image}
@@ -63,7 +66,9 @@ const SearchContent = () => {
                 <View style={SearchScreenStyles.multiImageContainerStyle}>
                   {item.images.slice(0, 4).map((item, index) => {
                     return (
-                      <TouchableOpacity>
+                      <TouchableOpacity
+                        onPressIn={() => getImage(item)}
+                        onPressOut={() => resetData()}>
                         <FastImage
                           source={item}
                           style={SearchScreenStyles.imageStyle}
@@ -72,7 +77,9 @@ const SearchContent = () => {
                     );
                   })}
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPressIn={() => getImage(item.images[5])}
+                  onPressOut={() => resetData()}>
                   <FastImage
                     source={item.images[5]}
                     style={{width: 128, height: 280}}
@@ -81,7 +88,9 @@ const SearchContent = () => {
               </View>
             ) : item.id === 2 ? (
               <View style={SearchScreenStyles.finalImageContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPressIn={() => getImage(item.images[2])}
+                  onPressOut={() => resetData()}>
                   <FastImage
                     source={item.images[2]}
                     style={{width: 260, height: 285}}
@@ -90,7 +99,10 @@ const SearchContent = () => {
                 <View style={SearchScreenStyles.finalImageInnerContainer}>
                   {item.images.slice(0, 2).map((image, index) => {
                     return (
-                      <TouchableOpacity style={{paddingBottom: 2}}>
+                      <TouchableOpacity
+                        style={{paddingBottom: 2}}
+                        onPressIn={() => getImage(image)}
+                        onPressOut={() => resetData()}>
                         <FastImage
                           source={image}
                           style={{width: 128, height: 142}}
